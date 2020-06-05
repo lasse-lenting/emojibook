@@ -19,9 +19,13 @@
 <img src="./emoji/bruh.png" onclick="bruh()">
 <script>
 	function bruh() {
-		alert('Url Copied!');
 		var copyText = "https://lasse-lenting.github.io/emojibook/emoji/bruh.png"
 		copyText.select(); 
+		copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+		/* Copy the text inside the text field */
+		document.execCommand("copy");
+		alert('Url Copied!');
 	}
 	function no() {
 		alert('Url Copied!');
